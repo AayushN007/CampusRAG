@@ -311,17 +311,38 @@ function App() {
 
 
 
+<div className="min-h-[300px] max-h-[500px] overflow-y-auto mb-6">
 
+  {chatHistory.length === 0 ? (
 
-          <div className="min-h-[300px] max-h-[500px] overflow-y-auto mb-6">
+    <p className="text-gray-500">
+      Upload PDFs and ask questions.
+    </p>
 
+  ) : (
 
-            {chatHistory.length === 0 ? (
+    chatHistory.map((msg, index) => (
 
-              <p className="text-gray-500">
-                Upload PDFs and ask questions.
-              </p>
+      <ChatMessage
+        key={index}
+        role={msg.role}
+        content={msg.content}
+      />
 
+    ))
+
+  )}
+
+  {loading && (
+
+    <ChatMessage
+      role="assistant"
+      content="🤖 AI is thinking..."
+    />
+
+  )}
+
+</div>
 
             ) : (
 
