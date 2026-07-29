@@ -35,7 +35,7 @@ function App() {
 
 
         await axios.post(
-          "http://127.0.0.1:8000/upload",
+          "https://campusrag-production.up.railway.app/upload",
           formData
         );
 
@@ -91,7 +91,7 @@ function App() {
 
       const response = await axios.post(
 
-        "http://127.0.0.1:8000/chat",
+        "https://campusrag-production.up.railway.app/chat",
 
         {
           question: userQuestion
