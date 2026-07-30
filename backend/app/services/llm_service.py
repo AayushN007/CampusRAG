@@ -1,9 +1,17 @@
 import os
+from dotenv import load_dotenv
 from groq import Groq
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+# Load variables from .env
+load_dotenv()
+
+client = Groq(
+    api_key=os.getenv("GROQ_API_KEY")
+)
+
 
 def generate_answer(question: str, context: str) -> str:
+
     prompt = f"""
 You are answering questions from a book.
 
