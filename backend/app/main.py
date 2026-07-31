@@ -9,13 +9,12 @@ from app.routes.chat import router as chat_router
 app = FastAPI(title=settings.app_name)
 
 # Enable CORS for the React frontend
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
+allow_origins=[
     "http://localhost:5173",
     "https://campus-rag-silk.vercel.app",
     "https://campus-rag-git-main-aayushn007s-projects.vercel.app",
-    "https://campusrag.vercel.app",  # if you add a custom Vercel domain later
+    "https://campus-en1p1mcqq-aayushn007s-projects.vercel.app",
+    "https://campusrag.vercel.app",
 ],
     allow_credentials=True,
     allow_methods=["*"],
