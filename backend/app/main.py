@@ -12,9 +12,11 @@ app = FastAPI(title=settings.app_name)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://campus-rag-silk.vercel.app",
-        "http://localhost:5173"
-    ],
+    "http://localhost:5173",
+    "https://campus-rag-silk.vercel.app",
+    "https://campus-rag-git-main-aayushn007s-projects.vercel.app",
+    "https://campusrag.vercel.app",  # if you add a custom Vercel domain later
+],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
