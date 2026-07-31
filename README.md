@@ -6,6 +6,12 @@ CampusRAG is a Retrieval-Augmented Generation (RAG) application that enables use
 
 The application combines **React**, **FastAPI**, **LangChain**, **ChromaDB**, **Hugging Face Embeddings**, and the **Groq LLM** to provide fast and reliable document-based question answering.
 
+## Live Demo
+
+🌐 Frontend: https://your-vercel-url
+
+⚙️ Backend API: https://your-railway-url/docs
+
 ---
 
 # 📌 Project Overview
